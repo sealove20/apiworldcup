@@ -15,12 +15,12 @@ fetch(url)
   .then((data) => {
     console.log(data);
     let teamsData = data.teams;
-    return teamsData.map(function(dados) {
+    return teamsData.map(function(team) {
       let li = createNode('li'),
           img = createNode('img'),
           span = createNode('span');
-      img.src = dados.flag;
-      span.innerHTML = `${dados.name}`;
+      img.src = team.flag;
+      span.innerHTML = `${team.name}`;
       append(li, img);
       append(li, span);
       append(ul, li);
